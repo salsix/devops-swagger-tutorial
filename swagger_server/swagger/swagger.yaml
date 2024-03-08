@@ -9,6 +9,8 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.0
 servers:
+- url: https://virtserver.swaggerhub.com/JONATHAN_41/tutorial/1.0.0
+  description: SwaggerHub API Auto Mocking
 - url: https://virtserver.SwaggerHub.com/tutorial/1.0.0
   description: SwaggerHub API Auto Mocking
 paths:
@@ -104,20 +106,22 @@ components:
           type: integer
         first_name:
           type: string
+          example: Jonathan
         last_name:
           type: string
+          example: Salzer
         gradeRecords:
           type: array
           items:
             $ref: '#/components/schemas/GradeRecord'
       example:
         student_id: 0
-        last_name: last_name
-        first_name: first_name
+        last_name: Salzer
+        first_name: Jonathan
         gradeRecords:
-        - grade: 6
+        - grade: 6.02745618307040320615897144307382404804229736328125
           subject_name: subject_name
-        - grade: 6
+        - grade: 6.02745618307040320615897144307382404804229736328125
           subject_name: subject_name
     GradeRecord:
       required:
@@ -128,8 +132,7 @@ components:
         subject_name:
           type: string
         grade:
-          type: integer
+          type: number
       example:
-        grade: 6
+        grade: 6.02745618307040320615897144307382404804229736328125
         subject_name: subject_name
-
